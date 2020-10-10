@@ -1,0 +1,147 @@
+test0:
+regular expression: (a|b)*(aa|bb)(a|b)*
+rnp: a b | * a a + b b + | + a b | * + 
+
+nfa: 
+node0--E-->node1--E-->node7
+node1--E-->node2--E-->node4
+node2--a-->node3
+node3--E-->node6
+node4--b-->node5
+node5--E-->node6
+node6--E-->node1--E-->node7
+node7--E-->node8--E-->node11
+node8--a-->node9
+node9--a-->node10
+node10--E-->node14
+node11--b-->node12
+node12--b-->node13
+node13--E-->node14
+node14--E-->node15--E-->node21
+node15--E-->node16--E-->node18
+node16--a-->node17
+node17--E-->node20
+node18--b-->node19
+node19--E-->node20
+node20--E-->node15--E-->node21
+node21
+start: 0
+end: 21
+
+dfa table: 
+E a b 
+0 {0,1,2,4,7,8,11,}; 1 {1,2,3,4,6,7,8,9,11,}; 2 {1,2,4,5,6,7,8,11,12,}; 
+1 {1,2,3,4,6,7,8,9,11,}; 3 {1,2,3,4,6,7,8,9,10,11,14,15,16,18,21,}; 2 {1,2,4,5,6,7,8,11,12,}; 
+2 {1,2,4,5,6,7,8,11,12,}; 1 {1,2,3,4,6,7,8,9,11,}; 4 {1,2,4,5,6,7,8,11,12,13,14,15,16,18,21,}; 
+3 {1,2,3,4,6,7,8,9,10,11,14,15,16,18,21,}; 5 {1,2,3,4,6,7,8,9,10,11,14,15,16,17,18,20,21,}; 6 {1,2,4,5,6,7,8,11,12,15,16,18,19,20,21,}; 
+4 {1,2,4,5,6,7,8,11,12,13,14,15,16,18,21,}; 7 {1,2,3,4,6,7,8,9,11,15,16,17,18,20,21,}; 8 {1,2,4,5,6,7,8,11,12,13,14,15,16,18,19,20,21,}; 
+5 {1,2,3,4,6,7,8,9,10,11,14,15,16,17,18,20,21,}; 5 {1,2,3,4,6,7,8,9,10,11,14,15,16,17,18,20,21,}; 6 {1,2,4,5,6,7,8,11,12,15,16,18,19,20,21,}; 
+6 {1,2,4,5,6,7,8,11,12,15,16,18,19,20,21,}; 7 {1,2,3,4,6,7,8,9,11,15,16,17,18,20,21,}; 8 {1,2,4,5,6,7,8,11,12,13,14,15,16,18,19,20,21,}; 
+7 {1,2,3,4,6,7,8,9,11,15,16,17,18,20,21,}; 5 {1,2,3,4,6,7,8,9,10,11,14,15,16,17,18,20,21,}; 6 {1,2,4,5,6,7,8,11,12,15,16,18,19,20,21,}; 
+8 {1,2,4,5,6,7,8,11,12,13,14,15,16,18,19,20,21,}; 7 {1,2,3,4,6,7,8,9,11,15,16,17,18,20,21,}; 8 {1,2,4,5,6,7,8,11,12,13,14,15,16,18,19,20,21,}; 
+start node id: 0 
+end node id: 3 4 5 6 7 8 
+
+minimized dfa table: 
+new_id original_id a b 
+0 0 1 2 
+1 1 3 2 
+2 2 1 3 
+3 3 3 3 
+minimized start node: 0 
+minimized end node: 3 
+
+
+test1:
+regular expression: (a|b)*abb
+rnp: a b | * a + b + b + 
+
+nfa: 
+node0--E-->node1--E-->node7
+node1--E-->node2--E-->node4
+node2--a-->node3
+node3--E-->node6
+node4--b-->node5
+node5--E-->node6
+node6--E-->node1--E-->node7
+node7--a-->node8
+node8--b-->node9
+node9--b-->node10
+node10
+start: 0
+end: 10
+
+dfa table: 
+E a b 
+0 {0,1,2,4,7,}; 1 {1,2,3,4,6,7,8,}; 2 {1,2,4,5,6,7,}; 
+1 {1,2,3,4,6,7,8,}; 1 {1,2,3,4,6,7,8,}; 3 {1,2,4,5,6,7,9,}; 
+2 {1,2,4,5,6,7,}; 1 {1,2,3,4,6,7,8,}; 2 {1,2,4,5,6,7,}; 
+3 {1,2,4,5,6,7,9,}; 1 {1,2,3,4,6,7,8,}; 4 {1,2,4,5,6,7,10,}; 
+4 {1,2,4,5,6,7,10,}; 1 {1,2,3,4,6,7,8,}; 2 {1,2,4,5,6,7,}; 
+start node id: 0 
+end node id: 4 
+
+minimized dfa table: 
+new_id original_id a b 
+0 0 1 0 
+1 1 1 3 
+2 3 1 4 
+3 4 1 0 
+minimized start node: 0 
+minimized end node: 3 
+
+
+test2:
+regular expression: abc
+rnp: a b + c + 
+
+nfa: 
+node0--a-->node1
+node1--b-->node2
+node2--c-->node3
+node3
+start: 0
+end: 3
+
+there is a node which can't reach any node!
+this may refer to that it can't be converted to a dfa!
+
+test3:
+regular expression: a*
+rnp: a * 
+
+nfa: 
+node0--E-->node1--E-->node3
+node1--a-->node2
+node2--E-->node1--E-->node3
+node3
+start: 0
+end: 3
+
+dfa table: 
+E a 
+0 {0,1,3,}; 1 {1,2,3,}; 
+1 {1,2,3,}; 1 {1,2,3,}; 
+start node id: 0 
+end node id: 0 1 
+
+this dfa is natually minimized!
+
+
+test4:
+regular expression: (a|b)
+rnp: a b | 
+
+nfa: 
+node0--E-->node1--E-->node3
+node1--a-->node2
+node2--E-->node5
+node3--b-->node4
+node4--E-->node5
+node5
+start: 0
+end: 5
+
+there is a node which can't reach any node!
+this may refer to that it can't be converted to a dfa!
+

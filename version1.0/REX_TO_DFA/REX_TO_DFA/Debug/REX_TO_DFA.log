@@ -1,0 +1,15 @@
+﻿  minimize_dfa.cpp
+F:\vs_repo\REX_TO_DFA\REX_TO_DFA\minimize_dfa.cpp(46,20): warning C4018: “<”: 有符号/无符号不匹配
+F:\vs_repo\REX_TO_DFA\REX_TO_DFA\minimize_dfa.cpp(58,20): warning C4018: “<”: 有符号/无符号不匹配
+F:\vs_repo\REX_TO_DFA\REX_TO_DFA\minimize_dfa.cpp(75,20): warning C4018: “<”: 有符号/无符号不匹配
+F:\vs_repo\REX_TO_DFA\REX_TO_DFA\minimize_dfa.cpp(101,20): warning C4018: “<”: 有符号/无符号不匹配
+F:\vs_repo\REX_TO_DFA\REX_TO_DFA\minimize_dfa.cpp(110,23): warning C4018: “<”: 有符号/无符号不匹配
+F:\vs_repo\REX_TO_DFA\REX_TO_DFA\minimize_dfa.cpp(129,21): warning C4018: “<”: 有符号/无符号不匹配
+F:\vs_repo\REX_TO_DFA\REX_TO_DFA\minimize_dfa.cpp(159,20): warning C4018: “<”: 有符号/无符号不匹配
+F:\vs_repo\REX_TO_DFA\REX_TO_DFA\minimize_dfa.cpp(164,20): warning C4018: “<”: 有符号/无符号不匹配
+F:\vs_repo\REX_TO_DFA\REX_TO_DFA\minimize_dfa.cpp(167,21): warning C4018: “<”: 有符号/无符号不匹配
+F:\vs_repo\REX_TO_DFA\REX_TO_DFA\minimize_dfa.cpp(174,20): warning C4018: “<”: 有符号/无符号不匹配
+F:\vs_repo\REX_TO_DFA\REX_TO_DFA\minimize_dfa.cpp(179,20): warning C4018: “<”: 有符号/无符号不匹配
+F:\vs_repo\REX_TO_DFA\REX_TO_DFA\minimize_dfa.cpp(189,20): warning C4018: “<”: 有符号/无符号不匹配
+F:\vs_repo\REX_TO_DFA\REX_TO_DFA\minimize_dfa.cpp(153): warning C4715: “minimize_step”: 不是所有的控件路径都返回值
+  REX_TO_DFA.vcxproj -> F:\vs_repo\REX_TO_DFA\Debug\REX_TO_DFA.exe

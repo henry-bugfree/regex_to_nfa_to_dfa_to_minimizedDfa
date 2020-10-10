@@ -1,0 +1,6 @@
+(a|b)*(aa|bb)(a|b)*
+(a|b)*abb
+abc
+a*
+(a|b)
+
